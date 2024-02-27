@@ -13,7 +13,7 @@ import { useDispatch } from "react-redux";
 import { getTransaction } from "../store/transactionSlice";
 import { income, outcome } from "../store/balanceSlice";
 import { ref, set } from "firebase/database";
-import { db } from "../firebase.js";
+
 import { uid } from "uid";
 import { incomeBalance } from "../store/incomeSlice";
 import { outcomeBalance } from "../store/outcomeSlice";
@@ -54,22 +54,6 @@ console.log(amount)
       setReceiver("")
       setType("")
     };
-
-    const sendData = () => {
-      const uuid = uid();
-      set(ref(db,`transactions/${uuid}`),{
-    type,
-    receiver,
-    category,
-    amount,
-    date,
-    id: uuid
-    
-      })
-     // addOrremoveBalance()
-    }
-
-    
 
     return (
       <Card>

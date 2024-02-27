@@ -31,7 +31,7 @@ const usePosts = () => {
       `;
       
       try {
-        const data = await hygraph.request(QUERY);
+        const data:any = await hygraph.request(QUERY);
         setPosts(data.posts);
       } catch (error) {
         console.error(error);

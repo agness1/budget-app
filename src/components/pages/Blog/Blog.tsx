@@ -8,15 +8,14 @@ const Blog:FC = () => {
 
 const posts = usePosts()
 
-
+console.log(posts);
   const blogContent = () => {
     if (posts.length !== 0) {
       return (
         <>
           {posts.map((content: any, index:number) => {
-            console.log(content.id)
+            console.log(content)
               return (
-                
                 <Link to={`/article/${content.id}`}>
 
                     <div key={index} className="flex flex-col items-center gap-8 bg-maxWhite rounded-2xl p-8 shadow-2xl cursor-pointer hover:scale-105 transition-all my-8">
