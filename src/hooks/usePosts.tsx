@@ -15,7 +15,7 @@ const usePosts = () => {
             title
             datePublished
             content {
-              html
+              text
             }
             img {
               url

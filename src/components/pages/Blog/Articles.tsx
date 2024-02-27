@@ -17,13 +17,14 @@ const Articles: FC = () => {
         : null;
       return (
         <>
-          <h1>{content.title}</h1>
-          <p>{content.datePublished}</p>
-          <img src={content.img.url} />
-          <p>{content.content.html}</p>
-          <p>
+          <h1 className="text-2xl font-bold p-4">{content.title}</h1>
+          <p className="text-xs font-light p-4">{content.datePublished}</p>
+          <img src={content.img.url} className="rounded-lg w-3/4 m-2" />
+          <p className="p-4 text-center text-lg mt-4">{content.content.text}</p>
+          <p className="font-medium flex items-center gap-2 p-4">
             Author:
-            <p>{content.author.name}</p>
+            <p className="font-bold">{content.author.name}</p>
+              <img src={content.author.avatar.url} alt="author" className="w-14"/>
           </p>
         </>
       );

@@ -12,9 +12,6 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useDispatch } from "react-redux";
 import { getTransaction } from "../store/transactionSlice";
 import { income, outcome } from "../store/balanceSlice";
-import { ref, set } from "firebase/database";
-
-import { uid } from "uid";
 import { incomeBalance } from "../store/incomeSlice";
 import { outcomeBalance } from "../store/outcomeSlice";
 

@@ -1,7 +1,6 @@
-import {FC, useState, useEffect} from "react";
+import {FC} from "react";
 import Card from "../../layout/card/Card";
 import { Link } from "react-router-dom";
-import { GraphQLClient, gql } from 'graphql-request';
 import usePosts from "../../../hooks/usePosts";
 
 const Blog:FC = () => {
